@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+
+    </header>
+    <!-- Main -->
+    <main>
+        <div class="w-[300px] mx-auto my-20">
+            <input type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
+        </div>
+
+        <!-- Discount Section -->
+        <section>
+          
+            <div class="flex justify-center flex-col items-center gap-20">
+                   <!-- Confusion Discount -->
+                   <div>
+                       <div class="card w-96 bg-base-100 shadow-xl">
+                           
+                           <div class="card-body items-center text-center">
+                            <h2 class="card-title">Price:<p>$<span id="main-price2">1000</span></p></h2>
+                             <!-- Input Discount -->
+                             <div>
+                               <input id="input-coupon" type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
+                             </div>
+                           
+                             <p>Coupon Code:<span> FF99</span></p>
+                             <div class="w-[200px] flex items-center gap-2">
+                                <button id="btn-2" class="btn btn-primary">Apply</button>
+                                <h1 class="text-lg font-bold">99% Discount</h1>
+                              </div>
+                              <p>You Need To Pay $<span id="you-pay2">0</span></p>
+                           </div>
+                         </div>
+                   </div>
+            </div>
+        </section>  
+    </main>
+    <script>
+        const dicountPersenteage=0.99;
+        document.getElementById('btn-2').addEventListener('click',function(){
+            //console.log('Cliked')
+           const mainPriceTo=document.getElementById('main-price2');
+           const mainPriceText=mainPriceTo.innerText;
+           //console.log(typeof mainPriceText)
+           const mainPriceStringToNum=parseFloat(mainPriceText);
+           //console.log(typeof mainPriceStringToNum);
+           const discountedPrice=mainPriceStringToNum*dicountPersenteage;
+           //console.log(discountedPrice);
+           const customerNeedToPay=mainPriceStringToNum-discountedPrice;
+           //console.log(customerNeedToPay);
+
+            const couponeCode=document.getElementById('input-coupon');
+            const couponCodeValue=couponeCode.value;
+            couponeCode.value="";
+            
+            //console.log(couponCodeValue);
+            if(couponCodeValue==='FF99'){
+                alert('Hurrah!! You got 99% discount');
+            }
+            else{
+                alert('Please Input Valid Coupon');
+                return;
+            }
+
+           const customerPay=document.getElementById('you-pay2');
+           customerPay.innerText=customerNeedToPay;
+
+        })
+        
+
+    </script>
+
+    
+</body>
+</html>

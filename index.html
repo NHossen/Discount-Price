@@ -15,7 +15,7 @@
     <!-- Main -->
     <main>
         <div class="w-[300px] mx-auto my-20">
-            <input type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
+            <input type="text" placeholder="Discount King Urrah!!!" class="input input-bordered input-info w-full max-w-xs" />
         </div>
 
         <!-- Discount Section -->
@@ -30,40 +30,47 @@
                              <h2 class="card-title">Price:<p>$<span id="main-price">1000</span></p></h2>
                              
                              <div class="w-[200px] flex items-center gap-2">
-                               <button class="btn btn-primary">Apply</button>
+                                <!-- Button -->
+                               <button id="apply-discount" class="btn btn-primary">Apply</button>
                                <h1 class="text-lg font-bold">99% Discount</h1>
                              </div>
+                             <!-- Need to Pay -->
                              <p>You Need To Pay $<span id="you-pay">0</span></p>
+
+                             <!-- Save Money -->
+                             <p>Wow You Save..! $<span id="you-save">0</span></p>
                              
                            </div>
                          </div>
                    </div>
                    <!-- Confusion Discount -->
                    <div>
-                       <div class="card w-96 bg-base-100 shadow-xl">
-                           
-                           <div class="card-body items-center text-center">
-                            <h2 class="card-title">Price:<p>$<span id="main-price">1000</span></p></h2>
-                             <!-- Input Discount -->
-                             <div>
-                               <input type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
-                             </div>
-                           
-                             <p>Coupon Code:<span> FF99</span></p>
-                             <div class="w-[200px] flex items-center gap-2">
-                                <button class="btn btn-primary">Apply</button>
-                                <h1 class="text-lg font-bold">99% Discount</h1>
-                              </div>
-                              <p>You Need To Pay $<span id="you-pay">0</span></p>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        
+                        <div class="card-body items-center text-center">
+                         <h2 class="card-title">Price:<p>$<span id="main-price2">1000</span></p></h2>
+                          <!-- Input Discount -->
+                          <div>
+                            <input id="input-coupon" type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
+                          </div>
+                        
+                          <p>Coupon Code:<span> FF99</span></p>
+                          <div class="w-[200px] flex items-center gap-2">
+                             <button id="btn-2" class="btn btn-primary">Apply</button>
+                             <h1 class="text-lg font-bold">99% Discount</h1>
                            </div>
-                         </div>
-                   </div>
+                           <p>You Need To Pay $<span id="you-pay2">0</span></p>
+                        </div>
+                      </div>
+                </div>
             </div>
         </section>  
     </main>
     <script>
-
+        
 
     </script>
+
+    <script src="discount.js"></script>
 </body>
 </html>
